@@ -1,0 +1,29 @@
+body {
+	background-color: rgb(229, 227, 223);
+	font-family: sans-serif;
+	font-size: 11pt;
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	font-size: 22pt;
+}
+
+div#header {
+	padding: 30px;
+	background-image: url("library.jpg");
+	border-bottom: 2px solid orange;
+}
+
+div#header p {
+	background-color: white;
+	display: inline-block;
+}
+
+div#footer {
+	border: 2px solid #666;
+	padding: 30px;
+	color: #666;
+}
+
