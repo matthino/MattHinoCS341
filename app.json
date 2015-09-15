@@ -1,5 +1,5 @@
 {
-	"name": "The Simplest Thing Possible",
+	"name": "The_Simplest_Thing_Possible",
 	"description": "A web app that displays the number of library hours at the University of Portland",
 	"repository": "https://github.com/matthino/MattHinoCS341",
 	"keywords": ["node", "express", "static"]
