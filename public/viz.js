@@ -113,6 +113,7 @@ function vizController(thisYear) {
 	
 	// Now check if the view[thisYear] is defined or not.
 	if( typeof(views[thisYear]) == "undefined" ) {
+		// get the new data for this year, and filter the data
 		views[thisYear] = new google.visualization.DataView(data);
 		views[thisYear].setRows(views[thisYear].getFilteredRows([{column: 2, value: thisYear}]));
 		
