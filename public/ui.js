@@ -1,9 +1,19 @@
 /**                                                                                                                                
  * ui.js                                                                                                                           
  *                                                                                                                                 
- * Defines functionality for instrumenting the user-interface.                                                                     
+ * Defines functionality for instrumenting the user-interface.  
+ * Uses the namespace pattern as to not pollute the global object.
  *                                                                                                                                 
  */
+
+// Declare a global variable. It will be what it was previously
+// or an empty JS object.
+var librs = librs || {};
+// Definte an object for librs.
+librs.ui = {};
+
+// create a module
+librs.ui = function() {
 
 var initialize = function() {
 
@@ -32,13 +42,13 @@ var toggle = function() {
 	var about = document.getElementById('about');
 	
 	// add/remove the 'show' class to the about section
-	if (hasClass(about, 'show'))
+	if (librs.utility.hasClass(about, 'show'))
 	{
-		removeClass(about, 'show');
+		librs.utility.removeClass(about, 'show');
 	}
 	else
 	{
-		addClass(about, 'show');
+		librs.utility.addClass(about, 'show');
 	}
 };
 
@@ -59,3 +69,15 @@ var fetch = function() {
 // the js is loaded after the DOM is loaded.  It is a                                                                              
 // good time to initialize the UI elements in the page.                                                                            
 initialize();
+	
+	
+}; // end module
+
+
+// Invoke the module. After invocation, the module's code
+// should be added to the namespace and is accessible
+// through the librs object
+librs.ui();
+
+
+
