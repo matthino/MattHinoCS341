@@ -42,13 +42,13 @@ var toggle = function() {
 	var about = document.getElementById('about');
 	
 	// add/remove the 'show' class to the about section
-	if (hasClass(about, 'show'))
+	if (librs.utility.hasClass(about, 'show'))
 	{
-		removeClass(about, 'show');
+		librs.utility.removeClass(about, 'show');
 	}
 	else
 	{
-		addClass(about, 'show');
+		librs.utility.addClass(about, 'show');
 	}
 };
 

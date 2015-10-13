@@ -11,6 +11,9 @@
  * @since: Jan 6, 2015
  */
 
+var librs = librs || {}; // since this uses the namespace
+
+
 google.load('visualization', '1', {packages: ['corechart']});
 
 google.setOnLoadCallback(vizInit);
@@ -77,7 +80,7 @@ function vizInit() {
 	queryObj.send(function(e) {
 				  
 		data = e.getDataTable();
-		console.log(data);
+		// console.log(data); // *** for testing
 				  
 		// Create a view for academic year 2013-2014 that
 		// is the first two columns of the data, just the
